@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:personal_finance/ui/layout/home_layout.dart';
 import 'package:personal_finance/ui/widgets/my_app_bar.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -43,7 +44,7 @@ class LoginScreen extends StatelessWidget {
             icon: const Icon(Icons.login),
             label: const Text('Login'),
             onPressed: () {
-              context.goNamed(name);
+              context.goNamed(HomeLayout.name);
             },
           ),
         ]));
