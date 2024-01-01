@@ -40,8 +40,8 @@ class LoginScreen extends StatelessWidget {
                 )),
           ]),
           FilledButton.icon(
-            icon: Icon(Icons.login),
-            label: Text('Login'),
+            icon: const Icon(Icons.login),
+            label: const Text('Login'),
             onPressed: () {
               context.goNamed(name);
             },
