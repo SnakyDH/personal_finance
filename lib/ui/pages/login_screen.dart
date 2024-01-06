@@ -43,9 +43,7 @@ class LoginScreen extends StatelessWidget {
           FilledButton.icon(
             icon: const Icon(Icons.login),
             label: const Text('Login'),
-            onPressed: () {
-              context.goNamed(HomeLayout.name);
-            },
+            onPressed: () => context.goNamed(HomeLayout.name),
           ),
         ]));
   }

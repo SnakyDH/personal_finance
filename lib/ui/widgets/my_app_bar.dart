@@ -3,11 +3,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final IconData icon;
   final AppBar appBar;
 
   const MyAppBar({
     super.key,
     this.title = 'Personal Finance App',
+    this.icon = FontAwesomeIcons.moneyBillWave,
     required this.appBar,
   });
 
@@ -17,10 +19,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const FaIcon(
-              FontAwesomeIcons.moneyBillWave,
-              color: Colors.greenAccent,
-            ),
+            FaIcon(icon, color: Colors.greenAccent),
             Container(padding: const EdgeInsets.all(10), child: Text(title))
           ],
         ),
