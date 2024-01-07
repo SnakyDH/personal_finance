@@ -13,26 +13,26 @@ class HistoryView extends StatelessWidget {
             title: const Text('History'),
             bottom: const TabBar(tabs: [
               Tab(
+                text: 'All',
+              ),
+              Tab(
                 text: 'Income',
               ),
               Tab(
                 text: 'Expense',
-              ),
-              Tab(
-                text: 'Transfer',
               ),
             ]),
           ),
           body: const TabBarView(
             children: [
               Center(
+                child: Text('All'),
+              ),
+              Center(
                 child: Text('Income'),
               ),
               Center(
                 child: Text('Expense'),
-              ),
-              Center(
-                child: Text('Transfer'),
               ),
             ],
           ),
