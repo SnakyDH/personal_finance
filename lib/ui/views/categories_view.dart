@@ -6,11 +6,30 @@ class CategoriesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Categories')),
-      body: const Center(
-        child: Text('Categories'),
-      ),
-    );
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('Categories'),
+            bottom: const TabBar(tabs: [
+              Tab(
+                text: 'Income',
+              ),
+              Tab(
+                text: 'Expense',
+              ),
+            ]),
+          ),
+          body: const TabBarView(
+            children: [
+              Center(
+                child: Text('Income'),
+              ),
+              Center(
+                child: Text('Expense'),
+              ),
+            ],
+          ),
+        ));
   }
 }
