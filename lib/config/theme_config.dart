@@ -16,7 +16,6 @@ class ThemeConfig {
           unselectedLabelColor: Colors.green[500],
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.green[200],
           selectedItemColor: Colors.green[900],
           unselectedItemColor: Colors.green[900]?.withOpacity(0.5),
         ),
@@ -33,7 +32,6 @@ class ThemeConfig {
           unselectedLabelColor: colorScheme.surface.withOpacity(0.5),
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.green[900],
           selectedItemColor: Colors.green[200],
           unselectedItemColor: Colors.green[200]?.withOpacity(0.5),
         ),
