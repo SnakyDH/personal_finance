@@ -19,6 +19,14 @@ final appRouter = GoRouter(initialLocation: '/login', routes: [
           path: '/history',
           name: HistoryView.name,
           builder: (context, state) => const HistoryView(),
-        )
+        ),
+        GoRoute(
+            path: '/categories',
+            name: CategoriesView.name,
+            builder: (context, state) => const CategoriesView()),
+        GoRoute(
+            path: '/budget',
+            name: BudgetView.name,
+            builder: (context, state) => const BudgetView()),
       ])
 ]);

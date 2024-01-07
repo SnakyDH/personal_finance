@@ -14,6 +14,12 @@ class MyBottomNavBar extends StatelessWidget {
       case 1:
         context.goNamed(HomeLayout.name);
         break;
+      case 2:
+        context.goNamed(CategoriesView.name);
+        break;
+      case 3:
+        context.goNamed(BudgetView.name);
+        break;
       default:
     }
   }
@@ -27,6 +33,10 @@ class MyBottomNavBar extends StatelessWidget {
         return 0;
       case '/home':
         return 1;
+      case '/categories':
+        return 2;
+      case '/budget':
+        return 3;
       default:
         return 0;
     }
@@ -46,6 +56,16 @@ class MyBottomNavBar extends StatelessWidget {
           icon: Icon(Icons.home_outlined),
           activeIcon: Icon(Icons.home),
           label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.category_outlined),
+          activeIcon: Icon(Icons.category),
+          label: 'Categories',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.account_balance_wallet_outlined),
+          activeIcon: Icon(Icons.account_balance_wallet),
+          label: 'Budget',
         ),
       ],
     );
