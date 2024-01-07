@@ -19,27 +19,30 @@ class LoginScreen extends StatelessWidget {
             'Login',
             style: TextStyle(fontSize: 30),
           ),
-          const Column(children: [
-            TextField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                icon: Icon(Icons.email),
-                border: OutlineInputBorder(),
-                labelText: 'Enter your email',
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextField(
-                obscureText: true,
-                autocorrect: false,
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            child: const Column(children: [
+              TextField(
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  icon: Icon(Icons.lock),
+                  icon: Icon(Icons.email),
                   border: OutlineInputBorder(),
-                  labelText: 'Enter your password',
-                )),
-          ]),
+                  labelText: 'Enter your email',
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                  obscureText: true,
+                  autocorrect: false,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.lock),
+                    border: OutlineInputBorder(),
+                    labelText: 'Enter your password',
+                  )),
+            ]),
+          ),
           FilledButton.icon(
             icon: const Icon(Icons.login),
             label: const Text('Login'),

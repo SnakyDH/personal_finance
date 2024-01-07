@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:personal_finance/ui/views/views_routes.dart';
+import 'package:personal_finance/ui/views/routes_views.dart';
 import 'package:personal_finance/ui/layout/home_layout.dart';
 
 class MyBottomNavBar extends StatelessWidget {
