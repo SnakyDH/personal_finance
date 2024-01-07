@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:personal_finance/ui/widgets/my_app_bar.dart';
 
 class HomeView extends StatelessWidget {
   static const String name = 'HomeView';
@@ -9,11 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(
-        appBar: AppBar(),
-        title: 'Home',
-        icon: FontAwesomeIcons.home,
-      ),
+      appBar: AppBar(title: const Text('Home')),
       body: const Center(
         child: Text('Home'),
       ),

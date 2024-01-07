@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:personal_finance/ui/layout/home_layout.dart';
-import 'package:personal_finance/ui/widgets/my_app_bar.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String name = 'LoginScreen';
@@ -10,9 +9,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: MyAppBar(
-          appBar: AppBar(),
-        ),
+        appBar: AppBar(),
         body:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           const Text(

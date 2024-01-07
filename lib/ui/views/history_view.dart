@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_finance/ui/widgets/my_app_bar.dart';
 
 class HistoryView extends StatelessWidget {
   static const String name = 'HistoryView';
@@ -7,14 +6,36 @@ class HistoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MyAppBar(
-        appBar: AppBar(),
-        title: 'History',
-      ),
-      body: const Center(
-        child: Text('History'),
-      ),
-    );
+    return DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text('History'),
+            bottom: const TabBar(tabs: [
+              Tab(
+                text: 'Income',
+              ),
+              Tab(
+                text: 'Expense',
+              ),
+              Tab(
+                text: 'Transfer',
+              ),
+            ]),
+          ),
+          body: const TabBarView(
+            children: [
+              Center(
+                child: Text('Income'),
+              ),
+              Center(
+                child: Text('Expense'),
+              ),
+              Center(
+                child: Text('Transfer'),
+              ),
+            ],
+          ),
+        ));
   }
 }

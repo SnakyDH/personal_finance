@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
         title: 'Personal Finance App',
-        theme: ThemeConfig().getTheme(),
+        theme: ThemeConfig.getLight(),
+        darkTheme: ThemeConfig.getDark(),
         routerConfig: appRouter);
   }
 }
