@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:personal_finance/ui/screens/login_screen.dart';
 import 'package:personal_finance/ui/layout/home_layout.dart';
-import 'package:personal_finance/ui/screens/signup_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  static const String name = 'LoginScreen';
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  static const name = 'signUp';
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
         body:
             Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           const Text(
-            'Login',
+            'Sign Up',
             style: TextStyle(fontSize: 30),
           ),
           Container(
@@ -40,16 +40,16 @@ class LoginScreen extends StatelessWidget {
                     labelText: 'Enter your password',
                   )),
               const SizedBox(height: 20),
-              const Text('Or Register here'),
+              const Text('Or LogIn here'),
               TextButton.icon(
-                  onPressed: () => context.goNamed(SignUpScreen.name),
+                  onPressed: () => context.goNamed(LoginScreen.name),
                   icon: const Icon(Icons.app_registration),
-                  label: const Text('Sign Up')),
+                  label: const Text('Log In')),
             ]),
           ),
           FilledButton.icon(
             icon: const Icon(Icons.login),
-            label: const Text('Login'),
+            label: const Text('Sign Up'),
             onPressed: () => context.goNamed(HomeLayout.name),
           ),
         ]));
