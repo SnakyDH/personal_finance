@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  icon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.email),
                   border: OutlineInputBorder(),
                   labelText: 'Enter your email',
                 ),
@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                   obscureText: true,
                   autocorrect: false,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.lock),
+                    prefixIcon: Icon(Icons.lock),
                     border: OutlineInputBorder(),
                     labelText: 'Enter your password',
                   )),

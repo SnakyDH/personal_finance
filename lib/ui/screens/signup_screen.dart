@@ -19,24 +19,24 @@ class SignUpScreen extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
+            child: const Column(
               children: [
-                const TextField(
+                TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder(),
                     labelText: 'Enter your email',
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-                const TextField(
+                TextField(
                     obscureText: true,
                     autocorrect: false,
                     decoration: InputDecoration(
-                      icon: Icon(Icons.lock),
+                      prefixIcon: Icon(Icons.lock),
                       border: OutlineInputBorder(),
                       labelText: 'Enter your password',
                     )),
