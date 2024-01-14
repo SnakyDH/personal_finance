@@ -32,6 +32,7 @@ class LoginScreen extends StatelessWidget {
                 height: 20,
               ),
               TextField(
+                  keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
                   autocorrect: false,
                   decoration: InputDecoration(
