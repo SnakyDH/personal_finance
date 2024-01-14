@@ -19,38 +19,48 @@ class SignUpScreen extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(children: [
-              const TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  icon: Icon(Icons.email),
-                  border: OutlineInputBorder(),
-                  labelText: 'Enter your email',
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const TextField(
-                  obscureText: true,
-                  autocorrect: false,
+            child: Column(
+              children: [
+                const TextField(
+                  keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    icon: Icon(Icons.lock),
+                    icon: Icon(Icons.email),
                     border: OutlineInputBorder(),
-                    labelText: 'Enter your password',
-                  )),
-              const SizedBox(height: 20),
-              const Text('Or LogIn here'),
-              TextButton.icon(
-                  onPressed: () => context.goNamed(LoginScreen.name),
-                  icon: const Icon(Icons.app_registration),
-                  label: const Text('Log In')),
-            ]),
+                    labelText: 'Enter your email',
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const TextField(
+                    obscureText: true,
+                    autocorrect: false,
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.lock),
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter your password',
+                    )),
+              ],
+            ),
           ),
-          FilledButton.icon(
-            icon: const Icon(Icons.login),
-            label: const Text('Sign Up'),
-            onPressed: () => context.goNamed(HomeLayout.name),
+          SizedBox(
+            height: 200,
+            child: Column(children: [
+              FilledButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text('Sign Up'),
+                onPressed: () => context.goNamed(HomeLayout.name),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Already have an account?"),
+                  TextButton(
+                      onPressed: () => context.goNamed(LoginScreen.name),
+                      child: const Text('Log In')),
+                ],
+              ),
+            ]),
           ),
         ]));
   }

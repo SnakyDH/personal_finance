@@ -19,8 +19,8 @@ class LoginScreen extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(children: [
-              const TextField(
+            child: const Column(children: [
+              TextField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
                   icon: Icon(Icons.email),
@@ -28,10 +28,10 @@ class LoginScreen extends StatelessWidget {
                   labelText: 'Enter your email',
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
-              const TextField(
+              TextField(
                   obscureText: true,
                   autocorrect: false,
                   decoration: InputDecoration(
@@ -39,18 +39,28 @@ class LoginScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                     labelText: 'Enter your password',
                   )),
-              const SizedBox(height: 20),
-              const Text('Or Register here'),
-              TextButton.icon(
-                  onPressed: () => context.goNamed(SignUpScreen.name),
-                  icon: const Icon(Icons.app_registration),
-                  label: const Text('Sign Up')),
             ]),
           ),
-          FilledButton.icon(
-            icon: const Icon(Icons.login),
-            label: const Text('Login'),
-            onPressed: () => context.goNamed(HomeLayout.name),
+          SizedBox(
+            height: 200,
+            child: Column(
+              children: [
+                FilledButton.icon(
+                  icon: const Icon(Icons.login),
+                  label: const Text('Login'),
+                  onPressed: () => context.goNamed(HomeLayout.name),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Don't have an account yet?"),
+                    TextButton(
+                        onPressed: () => context.goNamed(SignUpScreen.name),
+                        child: const Text('Sign Up')),
+                  ],
+                ),
+              ],
+            ),
           ),
         ]));
   }
