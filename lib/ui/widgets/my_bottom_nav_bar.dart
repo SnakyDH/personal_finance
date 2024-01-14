@@ -9,16 +9,16 @@ class MyBottomNavBar extends StatelessWidget {
   void _onItemTapped(BuildContext context, int index) {
     switch (index) {
       case 0:
-        context.goNamed(HistoryView.name);
-        break;
-      case 1:
         context.goNamed(HomeLayout.name);
         break;
-      case 2:
+      case 1:
         context.goNamed(CategoriesView.name);
         break;
-      case 3:
+      case 2:
         context.goNamed(BudgetView.name);
+        break;
+      case 3:
+        context.goNamed(HistoryView.name);
         break;
       default:
     }
@@ -29,13 +29,13 @@ class MyBottomNavBar extends StatelessWidget {
   ) {
     final String? path = GoRouterState.of(context).fullPath;
     switch (path) {
-      case '/history':
-        return 0;
       case '/home':
-        return 1;
+        return 0;
       case '/categories':
-        return 2;
+        return 1;
       case '/budget':
+        return 2;
+      case '/history':
         return 3;
       default:
         return 0;
@@ -48,10 +48,6 @@ class MyBottomNavBar extends StatelessWidget {
       onTap: (indexSelected) => _onItemTapped(context, indexSelected),
       currentIndex: _getCurrentIndex(context),
       items: const [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.history_outlined),
-            activeIcon: Icon(Icons.history),
-            label: 'History'),
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
           activeIcon: Icon(Icons.home),
@@ -67,6 +63,10 @@ class MyBottomNavBar extends StatelessWidget {
           activeIcon: Icon(Icons.account_balance_wallet),
           label: 'Budget',
         ),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.history_outlined),
+            activeIcon: Icon(Icons.history),
+            label: 'History'),
       ],
     );
   }
