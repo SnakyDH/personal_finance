@@ -41,6 +41,18 @@ class SignUpScreen extends StatelessWidget {
                       border: OutlineInputBorder(),
                       labelText: 'Enter your password',
                     )),
+                SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                    keyboardType: TextInputType.visiblePassword,
+                    obscureText: true,
+                    autocorrect: false,
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      border: OutlineInputBorder(),
+                      labelText: 'Confirm your password',
+                    )),
               ],
             ),
           ),
